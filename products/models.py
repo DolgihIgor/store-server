@@ -23,6 +23,7 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(default=0)
 
     # Изображение, загружается в папку products_images
+    # для работы с изображениями необходимо установить пакет Pollow
     image = models.ImageField(upload_to='products_images')
 
     # Категории - это ссылка на категорию, при удалении категории,

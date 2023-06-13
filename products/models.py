@@ -34,3 +34,7 @@ class Product(models.Model):
     # если указать PROTECT - не даст удалить, пока существует ссылка на категорию
     # SET_DEFAULT, default = Null - заполнит по умолчанию нулями
     category = models.ForeignKey(to=ProductCategory, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return f'Продукт: {self.name} | Категория: {self.category.name}'
